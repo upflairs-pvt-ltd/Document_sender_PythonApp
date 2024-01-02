@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-radius: 7px;
+    text-align: center;
+    
+  }
+</style>
+
+<body>
+    <h2>I have Successfully sent document on these student mail id`s :</h2>
+    <table id="tabl">
+        <th>Student Name</th> 
+        <th>Student Email</th> 
+    {% for Data_item in sent_mails %}  
+        <tr>
+            <td>{{ Data_item[0] }}</td>
+            <td>{{ Data_item[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Welcome To you in Document sender app.</h2>
+    <p>You can send document to on a differents emails at a same time.</p>
+    <form action="{{ url_for('send') }}" method="post">
+
+        <label for="inpt_path">Directory Path</label>
+        <input type="text" name="folder_path" id="inpt_path"><br>
+
+        <label for="subject">Subject</label>
+        <input type="text" name="subject" id="subject"><br>
+
+        <label for="content">Body</label><br>
+        <textarea name="body" id="content" cols="30" rows="10"></textarea><br>
+
+        <button type="submit">SEND</button>
+        <a href="http://127.0.0.1:8080/help">help</a>
+    </form>
+</body>
+</html>
